@@ -1,9 +1,30 @@
+#!/bin/bash
 #ставим ajenti
 add-apt-repository ppa:webupd8team/java
 a2enmod rewrite
 service apache2 restart
 echo ':: Installing ajenti'
-wget -O- https://raw.github.com/ajenti/ajenti/1.x/scripts/install-ubuntu.sh | sudo sh
+#wget -O- https://raw.github.com/ajenti/ajenti/1.x/scripts/install-ubuntu.sh | sudo sh
+#!/bin/bash
+if [ "$(id -u)" != "0" ]; then
+   echo "This script must be run as root" 1>&2
+   exit 1
+fi
+
+echo ':: Installing repo key'
+wget http://repo.ajenti.org/debian/key -O- | apt-key add -
+
+echo ':: Adding repo entry'
+echo "deb http://repo.ajenti.org/debian main main ubuntu" > /etc/apt/sources.list.d/ajenti.list
+
+echo ':: Updating lists'
+apt-get update
+
+echo ':: Installing package'
+apt-get install -y ajenti
+
+echo ':: Done! Open https://<address>:8000 in browser'
+#-----ajenti-end- install
 echo ':: Installing phpmyadmin'
 #config.inc.php
 apt-get install php7.0-cli libapache2-mod-php7.0 php7.0-mcrypt php-pear php-db php7.0-gd
