@@ -27,7 +27,7 @@ echo ':: Done! Open https://<address>:8000 in browser'
 #-----ajenti-end- install
 echo ':: Installing phpmyadmin'
 #config.inc.php
-apt-get install php7.0-cli libapache2-mod-php7.0 php7.0-mcrypt php-pear php-db php7.0-gd
+#apt-get install php7.0-cli libapache2-mod-php7.0 php7.0-mcrypt php-pear php-db php7.0-gd
 apt-get install phpmyadmin
 #php7enmod mcrypt
 echo ':: Installing plexmediaserver'
