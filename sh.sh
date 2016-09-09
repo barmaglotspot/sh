@@ -1,5 +1,6 @@
 #ставим ajenti
 a2enmod rewrite
+service apache2 restart
 echo ':: Installing ajenti'
 wget -O- https://raw.github.com/ajenti/ajenti/1.x/scripts/install-ubuntu.sh | sudo sh
 echo ':: Installing phpmyadmin'
