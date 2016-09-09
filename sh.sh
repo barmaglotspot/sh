@@ -6,7 +6,7 @@ echo ':: Installing ajenti'
 wget -O- https://raw.github.com/ajenti/ajenti/1.x/scripts/install-ubuntu.sh | sudo sh
 echo ':: Installing phpmyadmin'
 #config.inc.php
-#apt-get install php7-cli libapache2-mod-php7 php7-mcrypt php-pear php-db php7-gd
+apt-get install php7.0-cli libapache2-mod-php7.0 php7.0-mcrypt php-pear php-db php7.0-gd
 apt-get install phpmyadmin
 #php7enmod mcrypt
 echo ':: Installing plexmediaserver'
