@@ -1,4 +1,5 @@
 #ставим ajenti
+add-apt-repository ppa:webupd8team/java
 a2enmod rewrite
 service apache2 restart
 echo ':: Installing ajenti'
