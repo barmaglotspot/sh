@@ -42,6 +42,8 @@ echo "https://webdav.yandex.ru:443 barmaglot-server admin79787913618" >> /etc/da
 echo "https://webdav.yandex.ru:443 /media/Yandex davfs user,rw,_netdev 0 0" >> /etc/fstab
 adduser barmaglot davfs2
 mount /media/Yandex
+cp /media/Yandex/info.php /var/www/html
+cp /media/Yandex/info.php /var/www
 apt-get install oracle-java8-installer
 #wget http://downloads.sourceforge.net/project/daloradius/daloradius/daloradius0.9-9/daloradius-0.9-9.tar.gz
 #tar xvfz /media/Yandex/daloradius-0.9-9.tar.gz
