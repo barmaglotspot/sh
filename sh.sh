@@ -22,7 +22,7 @@ adduser barmaglot davfs2
 mount /media/Yandex
 
 #wget http://downloads.sourceforge.net/project/daloradius/daloradius/daloradius0.9-9/daloradius-0.9-9.tar.gz
-#tar xvfz daloradius-0.9-9.tar.gz
+#tar xvfz /media/Yandex/daloradius-0.9-9.tar.gz
 #mv daloradius-0.9-9 /var/www/daloradius
 #файл /etc/apache2/sites-available/000-default.conf
 #измените строку DocumentRoot /var/www/html на DocumentRoot /var/www
